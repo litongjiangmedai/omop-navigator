@@ -1,0 +1,9 @@
+# Ignore Python cache and envs
+__pycache__/
+*.py[cod]
+.env
+*.sqlite
+*.db
+*.log
+.vscode/
+.idea/
