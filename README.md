@@ -60,7 +60,9 @@ omop-navigator/
 
 3. **Try Example Queries**
    - Open Gradio in your browser
-   - Try: “Show patients with hypertension and a recent lab result.”
+   - Try: “How many people are in the database?”
+   - The system automatically generated the corresponding SQL statement:
+      SELECT COUNT(DISTINCT person_id) AS total_people FROM person;
 
 ---
 
