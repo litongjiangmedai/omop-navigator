@@ -103,8 +103,7 @@ This tool aligns with OHDSI’s values of openness, reproducibility, and collabo
 ## 📫 Contact
 
 Project lead: **Litong Jiang**  
-Affiliation: Chinese Academy of Sciences & Harvard Medical School  
-Email: `litongjiang@gmail.com`
+Email: `litongjiangmedai@gmail.com`
 
 ---
 
