@@ -1,0 +1,11 @@
+Enter your clinical question,☑️ Enable federated mode,Query SQL & Results,timestamp
+"How many patients were diagnosed with diabetes in the past year?
+",false,"🔍 SQL Generated:
+SELECT COUNT(DISTINCT person_id)
+FROM condition_occurrence
+WHERE condition_concept_id IN (SELECT concept_id FROM concept WHERE concept_name = 'Diabetes')
+AND condition_start_date >= DATE('now', '-1 year');
+
+📊 Results:
+📍 Local DB Result:
+[{'COUNT(DISTINCT person_id)': 0}]",2025-05-23 16:15:07.989628

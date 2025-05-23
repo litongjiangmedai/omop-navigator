@@ -1,0 +1,6 @@
+[
+  {
+    "input": "Find all patients diagnosed with diabetes.",
+    "output": "SELECT person_id FROM condition_occurrence WHERE condition_concept_id = 201826;"
+  }
+]

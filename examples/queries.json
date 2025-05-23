@@ -1,0 +1,32 @@
+[
+  {
+    "question": "List patients with type 2 diabetes",
+    "expected_sql": "SELECT person_id FROM condition_occurrence WHERE condition_concept_id IN (SELECT concept_id FROM concept WHERE concept_name = 'Type 2 diabetes mellitus');",
+    "expected_result": "[{'person_id': 1}]"
+  },
+  {
+    "question": "Find patients who took metformin",
+    "expected_sql": "SELECT person_id FROM drug_exposure WHERE drug_concept_id IN (SELECT concept_id FROM concept WHERE concept_name LIKE '%metformin%');",
+    "expected_result": "[{'person_id': 2}]"
+  },
+  {
+    "question": "Show patients who visited hospital in 2020",
+    "expected_sql": "SELECT person_id FROM visit_occurrence WHERE visit_start_date BETWEEN '2020-01-01' AND '2020-12-31';",
+    "expected_result": "[{'person_id': 1}]"
+  },
+  {
+    "question": "List patients with any form of diabetes",
+    "expected_sql": "SELECT person_id FROM condition_occurrence WHERE condition_concept_id IN (SELECT concept_id FROM concept WHERE concept_name LIKE '%diabetes%');",
+    "expected_result": "[{'person_id': 1}, {'person_id': 2}]"
+  },
+  {
+    "question": "Find patients born after 1985",
+    "expected_sql": "SELECT person_id FROM person WHERE year_of_birth > 1985;",
+    "expected_result": "[{'person_id': 2}]"
+  },
+  {
+    "question": "Patients with type 2 diabetes who took metformin",
+    "expected_sql": "SELECT DISTINCT co.person_id FROM condition_occurrence co JOIN drug_exposure de ON co.person_id = de.person_id WHERE co.condition_concept_id IN (SELECT concept_id FROM concept WHERE concept_name = 'Type 2 diabetes mellitus') AND de.drug_concept_id IN (SELECT concept_id FROM concept WHERE concept_name LIKE '%metformin%');",
+    "expected_result": "[]"
+  }
+]
