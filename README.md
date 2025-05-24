@@ -13,7 +13,7 @@
 
 ## 🎯 Key Features
 
-- 🔍 **Natural Language Interface**: Ask clinical research questions like "Find patients with type 2 diabetes and recent HbA1c tests" — and receive results from OMOP CDM.
+- 🔍 **Natural Language Interface**: Ask clinical research questions like "How many people are in the database" — and receive results from OMOP CDM.
 - 🧱 **Modular Design**: Each component (LLM prompt handling, database querying, ontology resolution, frontend UI) is decoupled for easy testing and extension.
 - 🌐 **Federated Querying**: Click-to-execute multi-database querying across SQLite nodes (PostgreSQL supported in future).
 - 🧠 **Prompt Engineering Toolkit**: Built-in templates for varied query intents — cohort definition, concept resolution, statistical comparison.
