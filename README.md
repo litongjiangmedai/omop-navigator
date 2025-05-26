@@ -1,5 +1,5 @@
 
-# OMOP-Navigator
+# OMOP-Navigator 0.1v
 
 **A modular, LLM-powered natural language interface for federated querying and cohort generation across OMOP CDM networks.**
 
